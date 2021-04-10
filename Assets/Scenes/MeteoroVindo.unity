@@ -301,6 +301,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
   m_PrefabInstance: {fileID: 47957118}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &386040059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 469044, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+  m_PrefabInstance: {fileID: 47957118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &386040061
 Animator:
   serializedVersion: 3
@@ -430,8 +435,8 @@ GameObject:
   m_Component:
   - component: {fileID: 478243861}
   - component: {fileID: 478243860}
-  - component: {fileID: 478243862}
   - component: {fileID: 478243863}
+  - component: {fileID: 478243862}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -487,10 +492,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 478243859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec08c46a4bcefff498e2ad068c8f8686, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f7ff449238471441b4dd9134089dd33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meteoro: {fileID: 386040057}
+  meteoro: {fileID: 386040059}
 --- !u!82 &478243863
 AudioSource:
   m_ObjectHideFlags: 0
@@ -501,7 +506,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49c170c349101dc4b8643e4e7c37ece5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 963fa7116e3b8a2479530f57bc118d5a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
