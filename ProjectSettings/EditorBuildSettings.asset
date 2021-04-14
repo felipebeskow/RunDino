@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RunDino.unity
     guid: ac57740c45a3d3e42a165a8a8ad4acd0
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 2f1686db0ed3a514996d0f14379d8186
   m_configObjects: {}

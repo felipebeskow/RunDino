@@ -25,19 +25,19 @@ public class SceneManagerMeteoroVindoScript : MonoBehaviour {
                 SceneManager.LoadScene("RunDino");
             }
         }
-        /*
-        if(SceneManager.GetActiveScene().name == "NomeDaCenaDesejada") {
-            source.Stop();
+
+        Debug.Log(SceneManager.GetActiveScene().name);
+        
+        if(SceneManager.GetActiveScene().name == "Creditos") {
+            Destroy(gameObject);
         }
-        */
+        
     }
 
     private void FixedUpdate() {
 
         if (textHistoria) {
             textHistoria.position = Vector3.Lerp(inicioHistoria.position, fimHistoria.position, lerpFactor);
-
-            Debug.Log(textHistoria.position + " - " + lerpFactor);
         }
         
     }

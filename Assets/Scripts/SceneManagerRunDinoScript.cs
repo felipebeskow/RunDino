@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManagerRunDinoScript : MonoBehaviour {
 
@@ -47,10 +48,10 @@ public class SceneManagerRunDinoScript : MonoBehaviour {
         }
 
         if ((cam.position.x >= 2150f)){
+            SceneManager.LoadScene("Creditos");
             Debug.Log("FIM!!!");
         }
 
-        Debug.Log("x:" + x + " - y:" + y + " - z:" + z);
         cam.position = new Vector3(cam.position.x, y, cam.position.z);
         cam.Translate(x, 0, z);
         cam.Rotate(-cam.rotation.x,-cam.rotation.y,-cam.rotation.z);
