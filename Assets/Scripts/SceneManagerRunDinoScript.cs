@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneManagerRunDinoScript : MonoBehaviour {
 
@@ -10,8 +11,13 @@ public class SceneManagerRunDinoScript : MonoBehaviour {
     public float deltaHorizontal;
     public float deltaVertical;
 
+    public Image img;
+
     private float y;
     private bool down;
+
+    private bool fadeOut = false;
+    private float indCor = 0;
 
     void Start() {
         y=20;        
@@ -48,8 +54,17 @@ public class SceneManagerRunDinoScript : MonoBehaviour {
         }
 
         if ((cam.position.x >= 2150f)){
+            fadeOut = true;
+            Debug.Log(img.color);
+        }
+
+        if (fadeOut) {
+            indCor+=0.05f;
+            img.color = new Color(1f,1f,1f,indCor);
+        }
+
+        if (indCor > 1) {
             SceneManager.LoadScene("Creditos");
-            Debug.Log("FIM!!!");
         }
 
         cam.position = new Vector3(cam.position.x, y, cam.position.z);
