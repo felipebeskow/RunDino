@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: ee2b15cef37fde24a94afd0ee494bb27, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xC1 65 milh\xF5es de anos atras, o planeta estava cheio pelos ancestrais
+  m_text: "H\xE1 65 milh\xF5es de anos atras, o planeta estava cheio pelos ancestrais
     das galinhas\n\ndigo melhor\n\nDINOSSAUROS!\n\r\n\nMas voc\xEA j\xE1 sabe o aconteceu\n\nent\xE3o
     agora s\xF3 resta CORRER!"
   m_isRightToLeft: 0
