@@ -12,6 +12,7 @@ public class PlayerChickenController : MonoBehaviour
     private Vector3 verticalTargetPosition;
     private int currentLane = 1;
     private float locateCity = 0;
+    private bool canMove = true;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
@@ -21,14 +22,16 @@ public class PlayerChickenController : MonoBehaviour
     }
 
     void Update() {
-        
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (canMove)
         {
-            ChangeLane(-1);
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            ChangeLane(1);
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                ChangeLane(-1);
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                ChangeLane(1);
+            }
         }
 
 
@@ -50,9 +53,25 @@ public class PlayerChickenController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        GameObject city = Instantiate(Resources.Load("Cidade", typeof(GameObject))) as GameObject;
-        locateCity += 32;
-        city.transform.position = new Vector3(0f, 0f, locateCity); 
-        Destroy(city, 60f);
+        if (other.CompareTag("NovaParteMapaTrigger")) { 
+            GameObject city = Instantiate(Resources.Load("Cidade", typeof(GameObject))) as GameObject;
+            locateCity += 32;
+            city.transform.position = new Vector3(0f, 0f, locateCity); 
+            Destroy(city, 60f);
+
+            float inicioz = locateCity;
+            float fimz = locateCity + 28;
+
+            for (int i=0; i<3; i++) {
+                GameObject pedra = Instantiate(Resources.Load("Pedra", typeof(GameObject))) as GameObject;
+                pedra.transform.position = new Vector3(Random.Range(-1, 2), 0.25f, Random.Range(inicioz, fimz));
+            }
+        } else if (other.CompareTag("Obstaculos")) {
+            Debug.Log("FIM DE JOGO!");
+            speed = 0f;
+            canMove = false;
+            anim.Play("Idle");
+            anim.Play("Turn Head");
+        }
     }
 }

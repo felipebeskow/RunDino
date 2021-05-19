@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  laneSpeed: 2
+  laneSpeed: 5
 --- !u!4 &396196799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4303844821561524, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
@@ -345,8 +345,6 @@ GameObject:
   - component: {fileID: 1789678535}
   - component: {fileID: 1789678534}
   - component: {fileID: 1789678533}
-  - component: {fileID: 1789678536}
-  - component: {fileID: 1789678537}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -419,27 +417,6 @@ Transform:
   m_Father: {fileID: 396196799}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1789678536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789678532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f172636ffa3e8424eab4165e599e93c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curveStrength: 0.1
---- !u!124 &1789678537
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789678532}
-  m_Enabled: 1
 --- !u!1001 &8820374430436910602
 PrefabInstance:
   m_ObjectHideFlags: 0
