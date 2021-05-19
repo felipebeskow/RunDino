@@ -52,7 +52,7 @@ public class PlayerChickenController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         GameObject city = Instantiate(Resources.Load("Cidade", typeof(GameObject))) as GameObject;
         locateCity += 32;
-        city.transform.position = new Vector3(0f, 0f, locateCity);
+        city.transform.position = new Vector3(0f, 0f, locateCity); 
         Destroy(city, 60f);
     }
 }
