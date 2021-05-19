@@ -267,6 +267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toon Chicken
       objectReference: {fileID: 0}
+    - target: {fileID: 1311290861401530, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4303844821561524, guid: 312b31977ed9b2d48a14849ebb8c7fb3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -400,60 +404,60 @@ Transform:
   m_Father: {fileID: 396196799}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &8992694505954013050
+--- !u!1001 &8820374430436910602
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005889, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+      propertyPath: m_Name
+      value: Cidade
+      objectReference: {fileID: 0}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4492810137698883768, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
+    - target: {fileID: 8820374429908005894, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562346661240858707, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}
-      propertyPath: m_Name
-      value: Cidade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca8010a7c087e044aa32f23dfd2cb96e, type: 3}

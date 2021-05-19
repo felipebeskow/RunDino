@@ -11,6 +11,7 @@ public class PlayerChickenController : MonoBehaviour
     private Animator anim;
     private Vector3 verticalTargetPosition;
     private int currentLane = 1;
+    private float locateCity = 0;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
@@ -46,5 +47,12 @@ public class PlayerChickenController : MonoBehaviour
             return;
         currentLane = targetLane;
         verticalTargetPosition = new Vector3((currentLane - 1), 0, 0);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        GameObject city = Instantiate(Resources.Load("Cidade", typeof(GameObject))) as GameObject;
+        locateCity += 32;
+        city.transform.position = new Vector3(0f, 0f, locateCity);
+        Destroy(city, 60f);
     }
 }
