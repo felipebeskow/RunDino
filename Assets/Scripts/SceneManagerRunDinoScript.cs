@@ -96,7 +96,7 @@ public class SceneManagerRunDinoScript : MonoBehaviour {
         }
 
         if (indCor > 1) {
-            SceneManager.LoadScene("Creditos");
+            SceneManager.LoadScene("GalinhaFu");
         }
 
         cam.position = new Vector3(cam.position.x, y, cam.position.z);

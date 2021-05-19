@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerChickenController : MonoBehaviour
 {
     public float speed = 10f;
     public float laneSpeed = 1;
+    public Image img;
 
     private Rigidbody rb;
     private Animator anim;
@@ -13,6 +16,7 @@ public class PlayerChickenController : MonoBehaviour
     private int currentLane = 1;
     private float locateCity = 0;
     private bool canMove = true;
+    private float next = 0;
 
     void Start() {
         rb = GetComponent<Rigidbody>();
@@ -42,6 +46,17 @@ public class PlayerChickenController : MonoBehaviour
 
     private void FixedUpdate() {
         rb.velocity = Vector3.forward * speed;
+
+        if (next > 0)
+        {
+            Debug.Log(next);
+            next += 0.01f;
+            img.color = new Color(0f, 0f, 0f, next);
+            if (next >= 1)
+            {
+                SceneManager.LoadScene("Creditos");
+            }
+        }
     }
 
     void ChangeLane(int direction) {
@@ -66,8 +81,9 @@ public class PlayerChickenController : MonoBehaviour
                 GameObject pedra = Instantiate(Resources.Load("Pedra", typeof(GameObject))) as GameObject;
                 pedra.transform.position = new Vector3(Random.Range(-1, 2), 0.25f, Random.Range(inicioz, fimz));
             }
-        } else if (other.CompareTag("Obstaculos")) {
-            Debug.Log("FIM DE JOGO!");
+        } else if (other.CompareTag("Obstaculos"))
+        {
+            next = 0.01f;
             speed = 0f;
             canMove = false;
             anim.Play("Idle");

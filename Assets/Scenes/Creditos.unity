@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1000}
   m_SizeDelta: {x: 807.94, y: 726.54}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58023915
@@ -288,7 +288,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Cr\xE9ditos\n\n\nTrabalho Acad\xEAmico\nda Disciplina de Realidade Virtual\n\n\nAcad\xEAmico\nFelipe
     Helfensteler Beskow\n\n\nProfessor\nJorge Aikes Junior\n\n\nUniversidade Tecnol\xF3gica
-    Federal do Paran\xE1\n\nSemestre 2020/02\n\n\nAbril de 2021"
+    Federal do Paran\xE1\n\nSemestre 2020/02\n\n\nMaio de 2021"
 --- !u!222 &58023916
 CanvasRenderer:
   m_ObjectHideFlags: 0
