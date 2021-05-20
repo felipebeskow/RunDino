@@ -42,6 +42,8 @@ public class PlayerChickenController : MonoBehaviour
         Vector3 targetPosition = new Vector3(verticalTargetPosition.x, transform.position.y, transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneSpeed * Time.deltaTime);
 
+        Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z-2);
+
     }
 
     private void FixedUpdate() {
