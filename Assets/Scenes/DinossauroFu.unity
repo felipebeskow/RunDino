@@ -171,7 +171,7 @@ Transform:
   - {fileID: 465639509}
   - {fileID: 1082660405}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &213812632
 MonoBehaviour:
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74523a91070f6141a4f7a128faa0e50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   laneSpeed: 5
   factorLerp: 0.03
   ArmLeft: {fileID: 45959306}
@@ -221,8 +221,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 5, z: 10}
-  m_Center: {x: 0, y: 3.5, z: 0}
+  m_Size: {x: 3, y: 3, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &393365969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1546128273574126821, guid: 1aed0c6d793f922448d36a722f92e834, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1546128273574126821, guid: 1aed0c6d793f922448d36a722f92e834, type: 3}
       propertyPath: m_LocalPosition.x

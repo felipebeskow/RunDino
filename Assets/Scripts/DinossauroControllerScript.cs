@@ -93,13 +93,13 @@ public class DinossauroControllerScript : MonoBehaviour
             Destroy(terreno, 120f); 
 
             float inicioz = locateCity;
-            float fimz = locateCity + 40;
-            /*
-            for (int i = 0; i < 3; i++)
+            float fimz = locateCity + 400;
+            
+            for (int i = 0; i < 8; i++)
             {
-                GameObject pedra = Instantiate(Resources.Load("Pedra", typeof(GameObject))) as GameObject;
-                pedra.transform.position = new Vector3(Random.Range(-1, 2), 0.25f, Random.Range(inicioz, fimz));
-            }*/
+                GameObject asterois = Instantiate(Resources.Load("Asteroids", typeof(GameObject))) as GameObject;
+                asterois.transform.position = new Vector3(Random.Range(-5, 6), 1f, Random.Range(inicioz, fimz));
+            }
         }
         else if (other.CompareTag("Obstaculos"))
         {
