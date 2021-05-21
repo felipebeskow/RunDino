@@ -22,7 +22,7 @@ public class SceneManagerMeteoroVindoScript : MonoBehaviour {
         
         if (meteoro) {
             if (meteoro.position.z >= 2000) {
-                SceneManager.LoadScene("RunDino");
+                SceneManager.LoadScene("DinossauroFu");
             }
         }
 

@@ -15,17 +15,35 @@ public class PlayerChickenController : MonoBehaviour
     private Vector3 verticalTargetPosition;
     private int currentLane = 1;
     private float locateCity = 0;
-    private bool canMove = true;
+    private bool canMove;
     private float next = 0;
+    private bool startScene;
+    private float startFactor;
 
     void Start() {
+        startScene = true;
+        startFactor = 1f;
+        canMove = false;
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
 
-        anim.Play("Run In Place");
+        anim.Play("Idle");
     }
 
     void Update() {
+        if (startScene)
+        {
+            img.color = new Color(255f, 255f, 255f, startFactor);
+            startFactor -= 0.005f;
+            rb.velocity = Vector3.forward * 0;
+            if (startFactor < 0)
+            {
+                startScene = false;
+                canMove = true;
+                anim.Play("Run In Place");
+            }
+        } 
+
         if (canMove)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -36,18 +54,21 @@ public class PlayerChickenController : MonoBehaviour
             {
                 ChangeLane(1);
             }
+
+            Vector3 targetPosition = new Vector3(verticalTargetPosition.x, transform.position.y, transform.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneSpeed * Time.deltaTime);
+
+            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z-2);
         }
 
-
-        Vector3 targetPosition = new Vector3(verticalTargetPosition.x, transform.position.y, transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneSpeed * Time.deltaTime);
-
-        Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z-2);
 
     }
 
     private void FixedUpdate() {
-        rb.velocity = Vector3.forward * speed;
+        if (canMove)
+        {
+            rb.velocity = Vector3.forward * speed;
+        }
 
         if (next > 0)
         {
