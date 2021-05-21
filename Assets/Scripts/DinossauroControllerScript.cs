@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DinossauroControllerScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class DinossauroControllerScript : MonoBehaviour
     public GameObject Corpo;
     public GameObject startC;
     public GameObject endC;
+    public Image img;
 
     private Rigidbody rb;
     private Vector3 verticalTargetPosition;
@@ -78,6 +80,16 @@ public class DinossauroControllerScript : MonoBehaviour
             ArmLeft.transform.position = Vector3.Slerp(startL.transform.position, endL.transform.position, factorLeft);
             ArmRight.transform.position = Vector3.Slerp(startR.transform.position, endR.transform.position, factorLeft);
         }
+        else
+        {
+            Corpo.transform.rotation = Quaternion.Lerp(startC.transform.rotation, endC.transform.rotation, factorLeft);
+            factorLeft += 0.01f;
+            if (factorLeft > 4)
+            {
+                img.color = new Color(255f, 255f, 255f, factorLeft-4);
+                StartCoroutine(coroutine);
+            }
+        }
     }
 
     void ChangeLane(int direction)
@@ -109,22 +121,18 @@ public class DinossauroControllerScript : MonoBehaviour
         }
         else if (other.CompareTag("Obstaculos"))
         {
-            next = 0.01f;
             speed = 0f;
             canMove = false;
-            StartCoroutine(coroutine);
+            factorLeft = 0;
+            //StartCoroutine(coroutine);
         }
     }
 
     private IEnumerator FimDino()
     {
         yield return new WaitForSeconds(1);
-        float factor = 0;
 
-        while (factor <= 1)
-        {
-            Corpo.transform.rotation = Quaternion.Lerp(startC.transform.rotation, endC.transform.rotation, factor);
-        }
-        
+        SceneManager.LoadScene("GalinhaFu");
+
     }
 }
