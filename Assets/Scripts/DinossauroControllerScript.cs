@@ -9,6 +9,9 @@ public class DinossauroControllerScript : MonoBehaviour
     public GameObject ArmLeft;
     public GameObject startL;
     public GameObject endL;
+    public GameObject ArmRight;
+    public GameObject startR;
+    public GameObject endR;
 
     private Rigidbody rb;
     private Vector3 verticalTargetPosition;
@@ -70,6 +73,7 @@ public class DinossauroControllerScript : MonoBehaviour
                 interpoolLeftSize = true;
         }
         ArmLeft.transform.position = Vector3.Slerp(startL.transform.position, endL.transform.position, factorLeft);
+        ArmRight.transform.position = Vector3.Slerp(startR.transform.position, endR.transform.position, factorLeft);
     }
 
     void ChangeLane(int direction)
