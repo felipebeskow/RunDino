@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,9 @@ public class DinossauroControllerScript : MonoBehaviour
     public GameObject ArmRight;
     public GameObject startR;
     public GameObject endR;
+    public GameObject Corpo;
+    public GameObject startC;
+    public GameObject endC;
 
     private Rigidbody rb;
     private Vector3 verticalTargetPosition;
@@ -21,13 +25,15 @@ public class DinossauroControllerScript : MonoBehaviour
     private float factorLeft;
 
     private float locateCity = 0;
-    private float next = 0;
+    private float next = 0; 
+    private IEnumerator coroutine;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         factorLeft = 0f;
         interpoolLeftSize = true;
+        coroutine = FimDino();
 
     }
 
@@ -106,6 +112,19 @@ public class DinossauroControllerScript : MonoBehaviour
             next = 0.01f;
             speed = 0f;
             canMove = false;
+            StartCoroutine(coroutine);
         }
+    }
+
+    private IEnumerator FimDino()
+    {
+        yield return new WaitForSeconds(1);
+        float factor = 0;
+
+        while (factor <= 1)
+        {
+            Corpo.transform.rotation = Quaternion.Lerp(startC.transform.rotation, endC.transform.rotation, factor);
+        }
+        
     }
 }
